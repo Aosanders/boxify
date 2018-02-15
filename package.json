@@ -1,0 +1,19 @@
+{
+  "name": "boxify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/Aosanders/boxify.git"
+  },
+  "author": "Austin Sanders",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
