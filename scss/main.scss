@@ -1,6 +1,6 @@
-@mixin image-background($imgUrl, $attachment: scroll){
+@mixin image-background($imgName, $attachment: scroll){
     background:{
-        image: url($imgUrl);
+        image: url(../images/#{$imgName}.jpg);
         repeat: no-repeat;
         position: center;
         size: cover;
@@ -14,14 +14,6 @@
     align-content: $align;
 }
 
-//place in container element
-@mixin menu-burger(){
-    width: 100%;
-    height: 100%;
-    //&:before -> box-shadow
-
-}
-
 body{
     color: white;
     font-size: 2rem;
@@ -29,16 +21,28 @@ body{
 }
 
 .section-1{
-    @include image-background("../images/hero-01.jpg");
+    @include image-background("hero-01");
     position: relative;
     height: 100%;
     width: 100%;
     min-height: 800px;
     padding: 80px 0;
 
-
     .section1-wrapper{
         padding:0 40px;
+
+        .section1-content{
+            font-size:3em;
+            margin: 350px 0 0;
+
+            a{
+                font-size: .5em;
+                padding: 1em;
+                margin-top: 50px;
+                border: 5px solid white;
+                border-radius: 5px;
+            }
+        }
     }
 
 }
@@ -48,6 +52,10 @@ body{
 
     .menu{
         font-size: 1.2em;
-    }
+        @include flexBox();
 
+        h3{
+            margin-right: 50px;
+        }
+    }
 }
