@@ -8,35 +8,40 @@
     }
 }
 
-@mixin flexBox($justify: flex-start, $align: stretch){
+@mixin flexBox($justify: flex-start, $align: stretch, $wrap: nowrap){
     display: flex;
     justify-content: $justify;
     align-content: $align;
+    flex-wrap: $wrap;
 }
 
 body{
     color: white;
-    font-size: 2rem;
     font-family: 'Nunito', sans-serif;
 }
 
 .section-1{
     @include image-background("hero-01");
-    position: relative;
+    overflow: auto;
     height: 100%;
     width: 100%;
     min-height: 800px;
     padding: 80px 0;
+    font-size: 2rem;
 
     .section1-wrapper{
         padding:0 40px;
 
         .section1-content{
-            font-size:3em;
             margin: 350px 0 0;
+            @include flexBox($wrap: wrap);
+
+            h1{
+                font-size: 3em;
+            }
 
             a{
-                font-size: .5em;
+                font-size: 1.5em;
                 padding: 1em;
                 margin-top: 50px;
                 border: 5px solid white;
@@ -51,11 +56,22 @@ body{
     @include flexBox(space-between);
 
     .menu{
-        font-size: 1.2em;
         @include flexBox();
 
         h3{
+            font-size: 1.2em;
             margin-right: 50px;
+        }
+
+        span{
+            content:"";
+            width: 2em;
+            height: 8px;
+            background: white;
+            border-radius: 5px;
+            box-shadow:
+            0 .6em 0 0 white,
+            0 1.2em 0 0 white;
         }
     }
 }
