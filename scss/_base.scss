@@ -1,16 +1,54 @@
+//=======GLOBALS===============//
+
 .logo{
-    height: 6rem;
-    width: 10rem;
+    height: 3rem;
+    width: 5rem;
 }
 
+.button{
+    border: 2px solid white;
+    padding: 1.5em 2.5em;
+}
+
+//=======HERO===============//
 .section-hero{
-    background-color: #000;
-    color: #fff;
+    background: url("../images/hero-01.jpg") center no-repeat fixed;
+    height: 100vh;
+    width: 100vw;
+    color:#fff;
 }
 
-.section-hero-header{
-    height: 42px;
-    .hero-logo{
-        float:left;
+//=======HERO-HEADER===============//
+
+    .section-hero-header{
+        padding-top: 3em;
+        .hero-logo{
+            float:left;
+            margin-left: 2em;
+        }
+        .menu-wrap{
+            float: right;
+            margin-right: 1em;
+            display: flex;
+            align-items: center;
+
+            h2{
+                font-size: 1.3rem;
+                padding-right: .75em;
+            }
+        }
     }
-}
+
+//=======HERO-CONTENT===============//
+    .hero-content{
+        margin: 10em 0 0 1em;
+        h1{
+            float: clear;
+            font-size: 2.5rem;
+        }
+
+        .hero-button{
+            display: inline-block;
+            margin-top: 2em;
+        }
+    }

@@ -1,12 +1,36 @@
 .logo {
-  height: 6rem;
-  width: 10rem; }
+  height: 3rem;
+  width: 5rem; }
+
+.button {
+  border: 2px solid white;
+  padding: 1.5em 2.5em; }
 
 .section-hero {
-  background-color: #000;
+  background: url("../images/hero-01.jpg") center no-repeat fixed;
+  height: 100vh;
+  width: 100vw;
   color: #fff; }
 
 .section-hero-header {
-  height: 42px; }
+  padding-top: 3em; }
   .section-hero-header .hero-logo {
-    float: left; }
+    float: left;
+    margin-left: 2em; }
+  .section-hero-header .menu-wrap {
+    float: right;
+    margin-right: 1em;
+    display: flex;
+    align-items: center; }
+    .section-hero-header .menu-wrap h2 {
+      font-size: 1.3rem;
+      padding-right: .75em; }
+
+.hero-content {
+  margin: 10em 0 0 1em; }
+  .hero-content h1 {
+    float: clear;
+    font-size: 2.5rem; }
+  .hero-content .hero-button {
+    display: inline-block;
+    margin-top: 2em; }
