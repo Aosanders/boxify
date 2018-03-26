@@ -1,0 +1,12 @@
+.logo {
+  height: 6rem;
+  width: 10rem; }
+
+.section-hero {
+  background-color: #000;
+  color: #fff; }
+
+.section-hero-header {
+  height: 42px; }
+  .section-hero-header .hero-logo {
+    float: left; }
