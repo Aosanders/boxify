@@ -1,5 +1,4 @@
 //=======GLOBALS===============//
-
 .logo{
     height: 3rem;
     width: 5rem;
@@ -8,14 +7,18 @@
 .button{
     border: 2px solid white;
     padding: 1.5em 2.5em;
+    border-radius: 5px;
+}
+
+.slideX{
+    transform: translateX(0);
+    opacity: 1;
 }
 
 //=======HERO===============//
 .section-hero{
-    background: url("../images/hero-01.jpg") center no-repeat fixed;
-    height: 100vh;
-    width: 100vw;
-    color:#fff;
+    @include backgroundImage("hero-01");
+    min-height: 800px;
 }
 
 //=======HERO-HEADER===============//
@@ -43,7 +46,7 @@
     .hero-content{
         margin: 10em 0 0 1em;
         h1{
-            float: clear;
+            clear: left;
             font-size: 2.5rem;
         }
 
@@ -51,4 +54,38 @@
             display: inline-block;
             margin-top: 2em;
         }
+
+        .hero-button-white{
+            position: absolute;
+            background-color: white;
+            color: #4b98a9;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: transform 0s, opacity 0s;
+        }
     }
+
+
+//=======VIDEO===============//
+.section-video{
+    @include flexCenter;
+    a{
+        font-size: 1rem;
+        margin: 3em auto;
+    }
+}
+
+
+//=======HTML===============//
+.section-html{
+    @include backgroundImage("features-intro-01");
+    @include flexCenter;
+    height: 400px;
+
+    img{
+        transform: translateX(-35px);
+        opacity: 0;
+        transition: transform .5s ease, opacity .5s ease;
+    }
+}
+

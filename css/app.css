@@ -4,13 +4,20 @@
 
 .button {
   border: 2px solid white;
-  padding: 1.5em 2.5em; }
+  padding: 1.5em 2.5em;
+  border-radius: 5px; }
+
+.slideX {
+  transform: translateX(0);
+  opacity: 1; }
 
 .section-hero {
-  background: url("../images/hero-01.jpg") center no-repeat fixed;
+  background: url("../images/hero-01.jpg") center no-repeat scroll;
   height: 100vh;
   width: 100vw;
-  color: #fff; }
+  color: #fff;
+  overflow-x: auto;
+  min-height: 800px; }
 
 .section-hero-header {
   padding-top: 3em; }
@@ -29,8 +36,61 @@
 .hero-content {
   margin: 10em 0 0 1em; }
   .hero-content h1 {
-    float: clear;
+    clear: left;
     font-size: 2.5rem; }
   .hero-content .hero-button {
     display: inline-block;
     margin-top: 2em; }
+  .hero-content .hero-button-white {
+    position: absolute;
+    background-color: white;
+    color: #4b98a9;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0s, opacity 0s; }
+
+.section-video {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .section-video a {
+    font-size: 1rem;
+    margin: 3em auto; }
+
+.section-html {
+  background: url("../images/features-intro-01.jpg") center no-repeat scroll;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; }
+  .section-html img {
+    transform: translateX(-35px);
+    opacity: 0;
+    transition: transform .5s ease, opacity .5s ease; }
+
+@media screen and (min-width: 470px) {
+  .hero-content {
+    margin-top: 15em; } }
+
+@media screen and (min-width: 580px) {
+  .hero-content .hero-button-white {
+    position: static;
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform .5s, opacity .5s; } }
+
+@media screen and (min-width: 675px) and (max-width: 980px) {
+  .section-hero-wrapper {
+    max-width: 675px;
+    margin: auto; } }
+
+@media screen and (min-width: 470px) {
+  .section-video a {
+    font-size: 1.5rem;
+    transition: color .5s ease; }
+    .section-video a:hover, .section-video a:focus {
+      color: #73d0da; } }

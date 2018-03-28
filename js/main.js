@@ -1,7 +1,15 @@
-document.addEventListener("DOMContentLoaded", function(){
-   const x = document.querySelector(".section1-content h1");
-   const y = document.querySelector(".section1-content a");
+window.addEventListener("DOMContentLoaded", function(){
+    const htmlLogo = document.querySelector(".section-html img");
 
-   x.classList.add("fadeInDown");
-   y.classList.add("fadeInUp");
+    window.onscroll = function() {slideElements()};
+
+
+function slideElements(){
+    console.log("hello");
+    if(document.documentElement.scrollTop > 250){
+        htmlLogo.classList.add("slideX");
+    }
+}
+
 });
+

@@ -1,0 +1,36 @@
+//=======HERO MEDIA QUERIES===============//
+@media screen and (min-width:470px){
+    .hero-content{
+        margin-top: 15em;
+    }
+}
+
+@media screen and (min-width:580px){
+    .hero-content .hero-button-white{
+            position: static;
+            opacity: 1;
+            transform: translateY(0);
+            transition: transform .5s, opacity .5s;
+        }
+}
+
+@media screen and (min-width:675px) and (max-width:980px){
+    .section-hero-wrapper{
+        max-width: 675px;
+        margin: auto;
+    }
+}
+
+//=======VIDEO MEDIA QUERIES===============//
+@media screen and (min-width:470px){
+    .section-video{
+        a{
+            font-size: 1.5rem;
+            transition: color .5s ease;
+
+            &:hover, &:focus{
+                color:#73d0da;
+            }
+        }
+    }
+}
