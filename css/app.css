@@ -8,13 +8,13 @@
   border-radius: 5px; }
 
 .slideX {
-  transform: translateX(0);
-  opacity: 1; }
+  transform: translateX(0) !important;
+  opacity: 1 !important; }
 
 .section-hero {
   background: url("../images/hero-01.jpg") center no-repeat scroll;
+  background-size: cover;
   height: 100vh;
-  width: 100vw;
   color: #fff;
   overflow-x: auto;
   min-height: 800px; }
@@ -59,18 +59,37 @@
 
 .section-html {
   background: url("../images/features-intro-01.jpg") center no-repeat scroll;
+  background-size: cover;
   height: 100vh;
-  width: 100vw;
   color: #fff;
   overflow-x: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 400px; }
-  .section-html img {
-    transform: translateX(-35px);
-    opacity: 0;
-    transition: transform .5s ease, opacity .5s ease; }
+
+.section-html_video {
+  transform: translateX(-35px);
+  opacity: 0;
+  transition: transform .5s ease, opacity .5s ease; }
+
+.section-feature {
+  background-color: #3F6184;
+  color: white; }
+
+.section-feature_slider-wrapper {
+  padding: 4em; }
+
+.section-feature_slider-content {
+  display: flex;
+  overflowX: hidden; }
+
+.dot {
+  height: 1em;
+  width: 1em;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent; }
 
 @media screen and (min-width: 470px) {
   .hero-content {

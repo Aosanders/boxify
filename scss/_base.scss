@@ -11,8 +11,8 @@
 }
 
 .slideX{
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateX(0) !important;
+    opacity: 1 !important;
 }
 
 //=======HERO===============//
@@ -21,49 +21,46 @@
     min-height: 800px;
 }
 
-//=======HERO-HEADER===============//
+.section-hero-header{
+    padding-top: 3em;
+    .hero-logo{
+        float:left;
+        margin-left: 2em;
+    }
+    .menu-wrap{
+        float: right;
+        margin-right: 1em;
+        display: flex;
+        align-items: center;
 
-    .section-hero-header{
-        padding-top: 3em;
-        .hero-logo{
-            float:left;
-            margin-left: 2em;
-        }
-        .menu-wrap{
-            float: right;
-            margin-right: 1em;
-            display: flex;
-            align-items: center;
-
-            h2{
-                font-size: 1.3rem;
-                padding-right: .75em;
-            }
+        h2{
+            font-size: 1.3rem;
+            padding-right: .75em;
         }
     }
+}
 
-//=======HERO-CONTENT===============//
-    .hero-content{
-        margin: 10em 0 0 1em;
-        h1{
-            clear: left;
-            font-size: 2.5rem;
-        }
-
-        .hero-button{
-            display: inline-block;
-            margin-top: 2em;
-        }
-
-        .hero-button-white{
-            position: absolute;
-            background-color: white;
-            color: #4b98a9;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: transform 0s, opacity 0s;
-        }
+.hero-content{
+    margin: 10em 0 0 1em;
+    h1{
+        clear: left;
+        font-size: 2.5rem;
     }
+
+    .hero-button{
+        display: inline-block;
+        margin-top: 2em;
+    }
+
+    .hero-button-white{
+        position: absolute;
+        background-color: white;
+        color: #4b98a9;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: transform 0s, opacity 0s;
+    }
+}
 
 
 //=======VIDEO===============//
@@ -82,10 +79,34 @@
     @include flexCenter;
     height: 400px;
 
-    img{
-        transform: translateX(-35px);
-        opacity: 0;
-        transition: transform .5s ease, opacity .5s ease;
-    }
 }
 
+.section-html_video{
+    transform: translateX(-35px);
+    opacity: 0;
+    transition: transform .5s ease, opacity .5s ease;
+}
+
+//=======FEATURES===============//
+.section-feature{
+    background-color: #3F6184;
+    color: white;
+}
+
+.section-feature_slider-wrapper{
+    padding: 4em;
+}
+
+.section-feature_slider-content{
+    display: flex;
+    overflowX: hidden;
+}
+
+.dot{
+    height: 1em;
+    width: 1em;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+
+}
