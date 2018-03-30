@@ -81,8 +81,10 @@
   padding: 4em; }
 
 .section-feature_slider-content {
-  display: flex;
-  overflowX: hidden; }
+  display: inline-block;
+  overflow-x: scroll; }
+  .section-feature_slider-content li {
+    width: 100%; }
 
 .dot {
   height: 1em;
